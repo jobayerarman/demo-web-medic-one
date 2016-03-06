@@ -91,28 +91,32 @@
 // ---------------------------
 
 .carousel-control {
+  font-size: @carousel-control-font-size;
+
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
+
   width: @carousel-control-width;
-  .opacity(@carousel-control-opacity);
-  font-size: @carousel-control-font-size;
-  color: @carousel-control-color;
+
   text-align: center;
+
+  color: @carousel-control-color;
+  background-color: rgba(0, 0, 0, 0);
   text-shadow: @carousel-text-shadow;
-  background-color: rgba(0, 0, 0, 0); // Fix IE9 click-thru bug
+
+  .opacity(@carousel-control-opacity); // Fix IE9 click-thru bug
   // We can't have this transition here because WebKit cancels the carousel
   // animation if you trip this while in the middle of another animation.
 
   // Set gradients for backgrounds
   &.left {
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+
   }
   &.right {
     left: auto;
     right: 0;
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
   }
 
   // Hover/focus state
@@ -130,15 +134,23 @@
   .glyphicon-chevron-left,
   .glyphicon-chevron-right {
     position: absolute;
-    top: 50%;
-    margin-top: -10px;
     z-index: 5;
+    top: 50%;
+
     display: inline-block;
+
+    margin-top: -10px;
+    padding-top: 7px;
+
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
+
   .icon-prev,
   .glyphicon-chevron-left {
     left: 50%;
     margin-left: -10px;
+    padding-right: 2px;
   }
   .icon-next,
   .glyphicon-chevron-right {
@@ -241,8 +253,8 @@
     .glyphicon-chevron-right,
     .icon-prev,
     .icon-next {
-      width: (@carousel-control-font-size * 1.5);
-      height: (@carousel-control-font-size * 1.5);
+      width: (@carousel-control-font-size * 2.2);
+      height: (@carousel-control-font-size * 2.2);
       margin-top: (@carousel-control-font-size / -2);
       font-size: (@carousel-control-font-size * 1.5);
     }
