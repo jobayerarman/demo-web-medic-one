@@ -2254,7 +2254,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 16rem;
+  height: 3.6rem;
   padding: 6px 12px;
   font-size: 1.5rem;
   line-height: 1.42857143;
@@ -2307,7 +2307,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 16rem;
+    line-height: 3.6rem;
   }
   input[type="date"].input-sm,
   input[type="time"].input-sm,
@@ -2484,7 +2484,7 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 20rem;
+  padding-right: 4.5rem;
 }
 .form-control-feedback {
   position: absolute;
@@ -2492,9 +2492,9 @@ select[multiple].input-lg {
   right: 0;
   z-index: 2;
   display: block;
-  width: 16rem;
-  height: 16rem;
-  line-height: 16rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  line-height: 3.6rem;
   text-align: center;
   pointer-events: none;
 }
@@ -3159,9 +3159,9 @@ input[type="button"].btn-block {
   width: 100%;
 }
 footer {
-  height: 100px;
-  margin: 10px 0;
+  margin: 80px 0 0;
   padding: 35px 0;
+  background-color: #ececec;
 }
 footer p {
   padding: 5px 0;
@@ -4062,8 +4062,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 23.2px;
+  margin-bottom: 23.2px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4147,8 +4147,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 23.2px;
+  margin-bottom: 23.2px;
 }
 .navbar-btn.btn-sm {
   margin-top: 18.5px;
@@ -6071,10 +6071,10 @@ button.close {
   .carousel-caption {
     left: 20%;
     right: 20%;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
   }
   .carousel-indicators {
-    bottom: 20px;
+    bottom: 5px;
   }
 }
 /*!
@@ -6593,7 +6593,7 @@ header .navbar-default {
   margin-bottom: 0;
 }
 .features {
-  padding: 27px 0;
+  padding: 28px 0;
   border: 6px solid #2c689c;
   border-radius: 50%;
   display: block;
@@ -6611,6 +6611,12 @@ header .navbar-default {
 }
 .health-tips li:last-child {
   margin-bottom: 0;
+}
+.cut-margin-top {
+  margin-top: -2px;
+}
+.panel-top-down {
+  margin-top: 10px;
 }
 .grid-example {
   line-height: 40px;
