@@ -189,6 +189,10 @@ module.exports = function(grunt) {
         },
         files: ['src/js//*.js'],
         tasks: ['jshint:beforeconcat', 'clean:js', 'concat', 'uglify', 'jshint:afterconcat']
+      },
+      images: {
+        files: ['src/images/**/*.{png,jpg,gif}'],
+        tasks: ['compress']
       }
     }
   });

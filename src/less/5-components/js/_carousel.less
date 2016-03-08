@@ -106,6 +106,8 @@
   background-color: rgba(0, 0, 0, 0);
   text-shadow: @carousel-text-shadow;
 
+  transition: all 0.2s ease-in-out;
+
   .opacity(@carousel-control-opacity); // Fix IE9 click-thru bug
   // We can't have this transition here because WebKit cancels the carousel
   // animation if you trip this while in the middle of another animation.
@@ -229,19 +231,23 @@
 // Hidden by default for smaller viewports
 .carousel-caption {
   position: absolute;
-  left: 15%;
+  z-index: 10;
   right: 15%;
   bottom: 20px;
-  z-index: 10;
+  left: 15%;
+
   padding-top: 20px;
   padding-bottom: 20px;
-  color: @carousel-caption-color;
+
   text-align: center;
+
+  color: @carousel-caption-color;
   text-shadow: @carousel-text-shadow;
   & .btn {
     text-shadow: none; // No shadow for button elements in carousel-caption
   }
 }
+
 
 
 // Scale up controls for tablets and up
@@ -253,10 +259,11 @@
     .glyphicon-chevron-right,
     .icon-prev,
     .icon-next {
+      font-size: (@carousel-control-font-size * 1.5);
+
       width: (@carousel-control-font-size * 2.2);
       height: (@carousel-control-font-size * 2.2);
       margin-top: (@carousel-control-font-size / -2);
-      font-size: (@carousel-control-font-size * 1.5);
     }
     .glyphicon-chevron-left,
     .icon-prev {
@@ -268,12 +275,15 @@
     }
   }
 
+
   // Show and left align the captions
   .carousel-caption {
-    left: 20%;
     right: 20%;
+    left: 20%;
+
     padding-bottom: 15px;
   }
+
 
   // Move up the indicators
   .carousel-indicators {
