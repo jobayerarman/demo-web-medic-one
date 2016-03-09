@@ -5,16 +5,21 @@
 }
 
 .social {
+  height: 44px;
+
   a {
     margin-right: 20px;
     padding: 11px 8px;
 
     border-radius: 50%;
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       color: white;
+    }
+    &:last-child {
+      margin-right: 0;
     }
   }
 
@@ -49,5 +54,11 @@
     &:hover {
       background-color: @googleplus;
     }
+  }
+}
+
+.content-heading {
+  h2 {
+    margin-bottom: 2rem;
   }
 }

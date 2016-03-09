@@ -23,8 +23,19 @@ th {
   width: 100%;
   max-width: 100%;
   margin-bottom: @line-height-computed;
+
+  > thead {
+    > tr {
+      > th,
+      > td, {
+        padding: (@table-cell-padding + 4) @table-cell-padding;
+        line-height: @line-height-base;
+        vertical-align: middle;
+        border-top: 1px solid @table-border-color;
+      }
+    }
+  }
   // Cells
-  > thead,
   > tbody,
   > tfoot {
     > tr {

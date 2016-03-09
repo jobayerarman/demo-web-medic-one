@@ -90,17 +90,30 @@
 .btn-danger {
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
+
+// Ghost buttons
+// -------------------------
+
 // Transparent Ghost button
 .btn-ghost {
   font-family: @headings-font-family;
   font-weight: @headings-font-weight;
 
-  border: 2px solid;
-  border-radius: 0;
+  transition: all 0.2s ease-in-out;
 
-  .button-variant(@btn-ghost-color; @btn-ghost-bg; @btn-ghost-border);
+  border: 1px solid;
+  border-radius: 0;
 }
 
+.btn-ghost-default {
+  .button-variant-ghost(@ghost-default-color; @ghost-default-bg; @ghost-default-border; @ghost-default-hover);
+}
+.btn-ghost-primary {
+  .button-variant-ghost(@ghost-primary-color; @ghost-primary-bg; @ghost-primary-color; @ghost-primary-hover);
+}
+.btn-ghost-info {
+  .button-variant-ghost(@ghost-info-color; @ghost-info-bg; @ghost-info-color; @ghost-info-hover);
+}
 
 
 // Link buttons
