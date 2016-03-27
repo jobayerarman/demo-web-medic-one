@@ -1,0 +1,28 @@
+.service-panel {
+
+
+  .head-image {
+    transition: all 0.3s ease-out;
+  }
+  i {
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    i {
+      color: #FFFFFF;
+    }
+    .head-image {
+      background-color: @brand-info;
+    }
+  }
+  .head-image {
+    padding-top: 22px;
+
+    border: 5px solid @gray-lighter;
+    border-radius: 50%;
+
+    .square(100px);
+    .center-block();
+  }
+}
